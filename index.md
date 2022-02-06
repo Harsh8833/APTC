@@ -1,4 +1,4 @@
-## Welcome to GitHub Pages
+## AJAY'S PHYSICS TEACHING CENTRE
 
 You can use the [editor on GitHub](https://github.com/Harsh8833/APTC/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
 
