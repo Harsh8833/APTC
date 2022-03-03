@@ -1,77 +1,116 @@
 {% extends 'base.html' %}
 
-{% block content %} 
+{% block content %}
 
-<nav class="navbar navbar-light" >
+<nav class="navbar navbar-light">
   <div class="container-fluid justify-content-center">
-      <ul class="nav nav-pills">
-          <li class="nav-item">
-            <a class="nav-link " href="/">Home</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link active" href="/admission/">New Admission</a>
-            </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/fees/">Fees Pay</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/allstudents/">All Students</a>
-          </li>
-        </ul>
+    <ul class="nav nav-pills">
+      <li class="nav-item">
+        <a class="nav-link " href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/admission/">New Admission</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/fees/">Fees Pay</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/allstudents/">All Students</a>
+      </li>
+    </ul>
   </div>
 </nav>
 
 
-<div class="d-flex p-5 bg-secondary text-white justify-content-center" style="border-radius: 20px">
+<div class="d-flex p-5 bg-secondary text-white justify-content-center"
+  style="border-top-right-radius: 50px; border-top-left-radius: 50px">
   <form action="">
 
+    <!-- Name input -->
+    <div class="form-outline mb-4 ">
+      <input type="text" id="name" class="form-control" style="width: 400px;">
+      <label class="form-label" for="name" style="margin-left: 0px;">Name</label>
+      <div class="form-notch">
+        <div class="form-notch-leading" style="width: 9px;"></div>
+        <div class="form-notch-middle" style="width: 98.8px;"></div>
+        <div class="form-notch-trailing"></div>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+          
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="form-check-input me-2" type="radio" name="gender" value="0" id="male">
+        <label class="form-check-label" for="form2Example3">
+          Male
+        </label>
+      </div>
+
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="form-check-input me-2" type="radio" name="gender" value="1" id="female" >
+        <label class="form-check-label" for="form2Example3">
+          Female
+        </label>
+      </div>
+
+    </div>
+
+
+    <!-- Father's Name input -->
+    <div class="form-outline mb-4">
+      <input type="text" id="fname" class="form-control">
+      <label class="form-label" for="fname" style="margin-left: 0px;">Father's Name</label>
+      <div class="form-notch">
+        <div class="form-notch-leading" style="width: 9px;"></div>
+        <div class="form-notch-middle" style="width: 88.8px;"></div>
+        <div class="form-notch-trailing"></div>
+      </div>
+    </div>
 
     <div class="col-md-12 mb-2">
       <form>
         <!-- 2 column grid layout with text inputs for the first and last names -->
         <div class="row mb-4">
-          <div class="col">
-            <div class="form-outline">
-              <input type="text" id="form3Example1" class="form-control">
-              <label class="form-label" for="form3Example1" style="margin-left: 0px;">First name</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+          
+          <div class="form-check d-flex justify-content-center mb-4 col">
+            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
+            <label class="form-check-label" for="form2Example3">
+              11th
+            </label>
           </div>
-          <div class="col">
-            <div class="form-outline">
-              <input type="text" id="form3Example2" class="form-control">
-              <label class="form-label" for="form3Example2" style="margin-left: 0px;">Last name</label>
-            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
+
+          <div class="form-check d-flex justify-content-center mb-4 col">
+            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
+            <label class="form-check-label" for="form2Example3">
+              12th
+            </label>
           </div>
+
         </div>
-
-        <!-- Email input -->
-        <div class="form-outline mb-4">
-          <input type="email" id="form3Example3" class="form-control">
-          <label class="form-label" for="form3Example3" style="margin-left: 0px;">Email address</label>
-        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
-
-        <!-- Password input -->
-        <div class="form-outline mb-4">
-          <input type="password" id="form3Example4" class="form-control">
-          <label class="form-label" for="form3Example4" style="margin-left: 0px;">Password</label>
-        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
-
-        <!-- Checkbox -->
-        <div class="form-check d-flex justify-content-center mb-4">
-          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
-          <label class="form-check-label" for="form2Example3">
-            Subscribe to our newsletter
-          </label>
-        </div>
-
-        <!-- Submit button -->
-        <button type="submit" class="btn btn-primary btn-block mb-4">
-          Sign up
-        </button>
-      </form>
     </div>
 
+    <!-- phone input -->
+    <div class="form-outline mb-4">
+      <input type="email" id="form3Example3" class="form-control">
+      <label class="form-label" for="form3Example3" style="margin-left: 0px;">Phone</label>
+      <div class="form-notch">
+        <div class="form-notch-leading" style="width: 9px;"></div>
+        <div class="form-notch-middle" style="width: 88.8px;"></div>
+        <div class="form-notch-trailing"></div>
+      </div>
+    </div>
+
+
+    <!-- Submit button -->
+    <div class="text-center">
+      <button type="submit" class="btn btn-primary btn-block mb-4">
+        Admit
+      </button>
+    </div>
   </form>
+</div>
+
+</form>
 </div>
 
 {% endblock %}
