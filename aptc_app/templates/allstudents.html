@@ -2,6 +2,26 @@
 
 {% block content %}
 
-<h1>Welcome to all students page</h1>
+<nav class="navbar navbar-light" >
+    <div class="container-fluid justify-content-center">
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+              <a class="nav-link " href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/admission/">New Admission</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/fees/">Fees Pay</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="/allstudents/">All Students</a>
+            </li>
+          </ul>
+    </div>
+  </nav>
+  
+
+<h1 class="position-absolute top-50 start-50 translate-middle-x">Welcome to all students page</h1>
 
 {% endblock %}

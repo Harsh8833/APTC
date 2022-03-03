@@ -2,67 +2,76 @@
 
 {% block content %} 
 
-<div class="container slider-one-active">
-    <div class="steps"> 
-      <div class="step step-one">
-        <div class="liner"></div>
-        <span>Personal</span>
-      </div>
-      <div class="step step-two">
-        <div class="liner"></div>
-        <span>Rating</span>
-      </div>
-      <div class="step step-three">
-        <div class="liner"></div>
-        <span>Conclusion</span>
-      </div>
-    </div>
-    <div class="line">
-      <div class="dot-move"></div>
-      <div class="dot zero"></div>
-      <div class="dot center"></div>
-      <div class="dot full"></div>
-    </div>
-    <div class="slider-ctr">
-      <div class="slider">
-
-
-
-        <form class="slider-form slider-one">
-          <h2>Step Form Design Experience</h2>
-          <label class="input">
-            <input type="text" class="name" placeholder="What's your name?">
-          </label>
-          <button class="first next">Next Step</button>
-        </form>
-
-
-        <form class="slider-form slider-two">
-          <h2>Are you happy with our service?</h2>
-          <div class="label-ctr">
-            <label class="radio">
-              <input type="radio" value="happy" name="condition">
-              <div class="emot happy">
-                <div class="mouth sad"></div>
-              </div>
-            </label>
-            <label class="radio">
-              <input type="radio" value="happy" name="condition">
-              <div class="emot happy">
-                <div class="mouth smile"></div>
-              </div>
-            </label>
-          </div>
-          <button class="second next">Next Step</button>
-        </form>
-        <div class="slider-form slider-three">
-          <h2>Hello, <span class="yourname"></span></h2>
-          <h3>Thank you for your input!
-                      </h3>
-          <a class="reset" href="https://codepen.io/balapa/pen/XbXVRg" target="_blank">Reset</a>
-        </div>
-      </div>
-    </div>
+<nav class="navbar navbar-light" >
+  <div class="container-fluid justify-content-center">
+      <ul class="nav nav-pills">
+          <li class="nav-item">
+            <a class="nav-link " href="/">Home</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link active" href="/admission/">New Admission</a>
+            </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/fees/">Fees Pay</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/allstudents/">All Students</a>
+          </li>
+        </ul>
   </div>
+</nav>
+
+
+<div class="d-flex p-3 bg-secondary text-white" style="border-radius: 20px">
+  <form action="">
+
+
+    <div class="col-md-6 mb-4">
+      <form>
+        <!-- 2 column grid layout with text inputs for the first and last names -->
+        <div class="row mb-4">
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example1" class="form-control">
+              <label class="form-label" for="form3Example1" style="margin-left: 0px;">First name</label>
+            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68.8px;"></div><div class="form-notch-trailing"></div></div></div>
+          </div>
+          <div class="col">
+            <div class="form-outline">
+              <input type="text" id="form3Example2" class="form-control">
+              <label class="form-label" for="form3Example2" style="margin-left: 0px;">Last name</label>
+            <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 68px;"></div><div class="form-notch-trailing"></div></div></div>
+          </div>
+        </div>
+
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="form3Example3" class="form-control">
+          <label class="form-label" for="form3Example3" style="margin-left: 0px;">Email address</label>
+        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 88.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="form3Example4" class="form-control">
+          <label class="form-label" for="form3Example4" style="margin-left: 0px;">Password</label>
+        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 64.8px;"></div><div class="form-notch-trailing"></div></div></div>
+
+        <!-- Checkbox -->
+        <div class="form-check d-flex justify-content-center mb-4">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
+          <label class="form-check-label" for="form2Example3">
+            Subscribe to our newsletter
+          </label>
+        </div>
+
+        <!-- Submit button -->
+        <button type="submit" class="btn btn-primary btn-block mb-4">
+          Sign up
+        </button>
+      </form>
+    </div>
+
+  </form>
+</div>
 
 {% endblock %}
