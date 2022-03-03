@@ -5,3 +5,5 @@
 .card-background{
   background-color: #a47bac;
 }
+
+@media (min-width: 768px) { }
