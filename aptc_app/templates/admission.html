@@ -2,6 +2,10 @@
 
 {% block content %}
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
+
 <nav class="navbar navbar-light">
   <div class="container-fluid justify-content-center">
     <ul class="nav nav-pills">
@@ -48,6 +52,23 @@
       </div>
     </div>
 
+    <!-- Board input -->
+    <div class="row mb-4">
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="form-check-input me-2" type="radio" name="board" value="0" id="cbse">
+        <label class="form-check-label" for="board">
+          CBSE
+        </label>
+      </div>
+
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="form-check-input me-2" type="radio" name="board" value="1" id="bseb">
+        <label class="form-check-label" for="board">
+          BSEB
+        </label>
+      </div>
+    </div>
+
     <!-- Name input -->
     <div class="form-floating mb-4" style="width: 300px;">
       <input type="name" class="form-control" id="name" placeholder="Full Name">
@@ -68,6 +89,16 @@
         <label class="form-check-label" for="gender">
           Female
         </label>
+      </div>
+    </div>
+
+    <div class="row mb-4">
+      <div class="form-floating input-group date" data-provide="datepicker">
+        <input type="text" class="form-control">
+        <label class="text-dark" for="fname">DOB</label>
+        <div class="input-group-addon">
+          <span class="glyphicon glyphicon-th"></span>
+        </div>
       </div>
     </div>
 
