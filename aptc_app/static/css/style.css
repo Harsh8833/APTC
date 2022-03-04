@@ -2,8 +2,17 @@
     background-color: #E1BEE7;
 }
 
-.card-background{
-  background-color: #a47bac;
+.background{
+  background-color: #E1BEE7;
 }
 
-@media (min-width: 768px) { }
+/* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+
