@@ -22,84 +22,87 @@
 </nav>
 
 
+<!-- Input Form -->
+
 <div class="d-flex p-5 bg-secondary text-white justify-content-center"
   style="border-top-right-radius: 50px; border-top-left-radius: 50px">
-  <form action="">
+  <form action="" method="get">
+    <div class="col-md-12 mb-2">
 
-    <!-- Name input -->
-    <div class="form-outline mb-4 ">
-      <input type="text" id="name" class="form-control" style="width: 400px;">
-      <label class="form-label" for="name" style="margin-left: 0px;">Name</label>
-      <div class="form-notch">
-        <div class="form-notch-leading" style="width: 9px;"></div>
-        <div class="form-notch-middle" style="width: 98.8px;"></div>
-        <div class="form-notch-trailing"></div>
+      <!-- Select class -->
+      <div class="row mb-4">
+        <div class="form-check d-flex justify-content-center mb-4 col">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
+          <label class="form-check-label" for="form2Example3">
+            11th
+          </label>
+        </div>
+
+        <div class="form-check d-flex justify-content-center mb-4 col">
+          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
+          <label class="form-check-label" for="form2Example3">
+            12th
+          </label>
+        </div>
+
       </div>
     </div>
 
+    <!-- Name input -->
+    <div class="form-floating mb-4" style="width: 300px;">
+      <input type="name" class="form-control" id="name" placeholder="Full Name">
+      <label class="text-dark" for="name">Name</label>
+    </div>
+
+    <!-- Gender input -->
     <div class="row mb-4">
-          
       <div class="form-check d-flex justify-content-center mb-4 col">
         <input class="form-check-input me-2" type="radio" name="gender" value="0" id="male">
-        <label class="form-check-label" for="form2Example3">
+        <label class="form-check-label" for="gender">
           Male
         </label>
       </div>
 
       <div class="form-check d-flex justify-content-center mb-4 col">
-        <input class="form-check-input me-2" type="radio" name="gender" value="1" id="female" >
-        <label class="form-check-label" for="form2Example3">
+        <input class="form-check-input me-2" type="radio" name="gender" value="1" id="female">
+        <label class="form-check-label" for="gender">
           Female
         </label>
       </div>
-
     </div>
 
 
     <!-- Father's Name input -->
-    <div class="form-outline mb-4">
-      <input type="text" id="fname" class="form-control">
-      <label class="form-label" for="fname" style="margin-left: 0px;">Father's Name</label>
-      <div class="form-notch">
-        <div class="form-notch-leading" style="width: 9px;"></div>
-        <div class="form-notch-middle" style="width: 88.8px;"></div>
-        <div class="form-notch-trailing"></div>
-      </div>
+    <div class="form-floating mb-4" style="width: 300px;">
+      <input type="text" class="form-control" id="fname" placeholder="Father's Name">
+      <label class="text-dark" for="fname">Father's Name</label>
     </div>
 
-    <div class="col-md-12 mb-2">
-      <form>
-        <!-- 2 column grid layout with text inputs for the first and last names -->
-        <div class="row mb-4">
-          
-          <div class="form-check d-flex justify-content-center mb-4 col">
-            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
-            <label class="form-check-label" for="form2Example3">
-              11th
-            </label>
-          </div>
 
-          <div class="form-check d-flex justify-content-center mb-4 col">
-            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
-            <label class="form-check-label" for="form2Example3">
-              12th
-            </label>
-          </div>
-
-        </div>
-    </div>
 
     <!-- phone input -->
-    <div class="form-outline mb-4">
-      <input type="email" id="form3Example3" class="form-control">
-      <label class="form-label" for="form3Example3" style="margin-left: 0px;">Phone</label>
-      <div class="form-notch">
-        <div class="form-notch-leading" style="width: 9px;"></div>
-        <div class="form-notch-middle" style="width: 88.8px;"></div>
-        <div class="form-notch-trailing"></div>
-      </div>
+    <div class="form-floating mb-4" style="width: 300px;">
+      <input type="number" class="form-control" id="phone" placeholder="Phone">
+      <label class="text-dark" for="phone">Phone</label>
     </div>
 
+    <!-- Receipt No. input -->
+    <div class="form-floating mb-4" style="width: 300px;">
+      <input type="number" class="form-control" id="rid" placeholder="Receipt">
+      <label class="text-dark" for="rid">Receipt Number</label>
+    </div>
+
+    <!-- Receipt Amount -->
+    <div class="form-floating mb-4" style="width: 300px;">
+      <input type="Number" class="form-control" id="ramt" placeholder="Receipt Amount">
+      <label class="text-dark" for="ramt">Receipt Amount</label>
+    </div>
+
+    <!-- comment -->
+    <div class="form-floating mb-4">
+      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <label class="text-dark" for="floatingTextarea">Comments</label>
+    </div>
 
     <!-- Submit button -->
     <div class="text-center">
@@ -107,7 +110,7 @@
         Admit
       </button>
     </div>
-  </form>
+
 </div>
 
 </form>
