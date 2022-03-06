@@ -7,7 +7,7 @@ def detail(request):
 
 def saveEnquiry(request):
     if request.method=="POST":
-        clas=request.POST.get('class')
+        sclass=request.POST.get('sclass')
         board=request.POST.get('board')
         name=request.POST.get('name')
         gender=request.POST.get('gender')
@@ -17,7 +17,7 @@ def saveEnquiry(request):
         receipt_no=request.POST.get('receipt_no')
         receipt_amt=request.POST.get('receipt_amt')
         comment=request.POST.get('comment')
-        en=students_detail(student_class=clas, student_board=board, student_name=name, student_gender=gender, student_date_of_birth=dob, student_father_name=father, student_phone_number=phone, student_receipt_number=receipt_no, student_receipt_amount=receipt_amt, student_comments=comment)
+        en=students_detail(sclass=sclass, board=board, name=name, gender=gender, dob=dob, fname=father, phone=phone, rnum=receipt_no, ramt=receipt_amt, comment=comment)
         en.save()
     return render(request,"admission.html")
 
