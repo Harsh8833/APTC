@@ -15,12 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from aptc_app import views
 
 urlpatterns = [ 
     path('', include('home.urls')),
     path('admission/', include('admission.urls')),
     path('fees/', include('fees.urls')),
     path('allstudents/', include('allstudents.urls')),
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('saveform/', views.saveEnquiry, name="saveform")   
     
 ]

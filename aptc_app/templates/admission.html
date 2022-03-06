@@ -30,71 +30,37 @@
 
 <div class="d-flex p-5 bg-secondary text-white justify-content-center"
   style="border-top-right-radius: 50px; border-top-left-radius: 50px">
-  <form action="" method="get">
+  <form action="{% url 'saveform' %}" method="post">
+    {% csrf_token %}
     <div class="col-md-12 mb-2">
 
       <!-- Select class -->
-      <div class="row mb-4">
-        <div class="form-check d-flex justify-content-center mb-4 col">
-          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
-          <label class="form-check-label" for="form2Example3">
-            11th
-          </label>
-        </div>
-
-        <div class="form-check d-flex justify-content-center mb-4 col">
-          <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" checked="">
-          <label class="form-check-label" for="form2Example3">
-            12th
-          </label>
-        </div>
-
+      <div class="form-floating mb-4" style="width: 300px;">
+        <input type="class" class="form-control" name="class" id="class" placeholder="class">
+        <label class="text-dark" for="board">Class</label>
       </div>
-    </div>
 
     <!-- Board input -->
-    <div class="row mb-4">
-      <div class="form-check d-flex justify-content-center mb-4 col">
-        <input class="form-check-input me-2" type="radio" name="board" value="0" id="cbse">
-        <label class="form-check-label" for="board">
-          CBSE
-        </label>
-      </div>
-
-      <div class="form-check d-flex justify-content-center mb-4 col">
-        <input class="form-check-input me-2" type="radio" name="board" value="1" id="bseb">
-        <label class="form-check-label" for="board">
-          BSEB
-        </label>
-      </div>
+    <div class="form-floating mb-4" style="width: 300px;">
+      <input type="name" class="form-control" name="board" id="board" placeholder="Board Name">
+      <label class="text-dark" for="board">Board Name</label>
     </div>
 
     <!-- Name input -->
     <div class="form-floating mb-4" style="width: 300px;">
-      <input type="name" class="form-control" id="name" placeholder="Full Name">
+      <input type="name" class="form-control" name="name" id="name" placeholder="Full Name">
       <label class="text-dark" for="name">Name</label>
     </div>
 
-    <!-- Gender input -->
-    <div class="row mb-4">
-      <div class="form-check d-flex justify-content-center mb-4 col">
-        <input class="form-check-input me-2" type="radio" name="gender" value="0" id="male">
-        <label class="form-check-label" for="gender">
-          Male
-        </label>
-      </div>
-
-      <div class="form-check d-flex justify-content-center mb-4 col">
-        <input class="form-check-input me-2" type="radio" name="gender" value="1" id="female">
-        <label class="form-check-label" for="gender">
-          Female
-        </label>
-      </div>
+    
+    <div class="form-floating mb-4" style="width: 300px;">
+      <input type="gender" class="form-control" name="gender" id="board" placeholder="Gender">
+      <label class="text-dark" for="Gender">Gender</label>
     </div>
-
+    <!-- DOB -->
     <div class="row mb-4">
       <div class="form-floating input-group date" data-provide="datepicker">
-        <input type="text" class="form-control">
+        <input type="text" name="dob" class="form-control">
         <label class="text-dark" for="fname">DOB</label>
         <div class="input-group-addon">
           <span class="glyphicon glyphicon-th"></span>
@@ -105,7 +71,7 @@
 
     <!-- Father's Name input -->
     <div class="form-floating mb-4" style="width: 300px;">
-      <input type="text" class="form-control" id="fname" placeholder="Father's Name">
+      <input type="text" class="form-control" name="father" id="fname" placeholder="Father's Name">
       <label class="text-dark" for="fname">Father's Name</label>
     </div>
 
@@ -113,25 +79,25 @@
 
     <!-- phone input -->
     <div class="form-floating mb-4" style="width: 300px;">
-      <input type="number" class="form-control" id="phone" placeholder="Phone">
+      <input type="number" class="form-control" name="phone" id="phone" placeholder="Phone">
       <label class="text-dark" for="phone">Phone</label>
     </div>
 
     <!-- Receipt No. input -->
     <div class="form-floating mb-4" style="width: 300px;">
-      <input type="number" class="form-control" id="rid" placeholder="Receipt">
+      <input type="number" class="form-control" name="receipt_no" id="rid" placeholder="Receipt">
       <label class="text-dark" for="rid">Receipt Number</label>
     </div>
 
     <!-- Receipt Amount -->
     <div class="form-floating mb-4" style="width: 300px;">
-      <input type="Number" class="form-control" id="ramt" placeholder="Receipt Amount">
+      <input type="Number" class="form-control" name="receipt_amt" id="ramt" placeholder="Receipt Amount">
       <label class="text-dark" for="ramt">Receipt Amount</label>
     </div>
 
     <!-- comment -->
     <div class="form-floating mb-4">
-      <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
+      <textarea class="form-control" name="comment" placeholder="Leave a comment here" id="floatingTextarea"></textarea>
       <label class="text-dark" for="floatingTextarea">Comments</label>
     </div>
 

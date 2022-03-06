@@ -10,5 +10,5 @@ class students_detail(models.Model):
     student_phone_number=models.IntegerField()
     student_receipt_number=models.IntegerField()
     student_receipt_amount=models.IntegerField()
-    student_comments=models.CharField(max_length=100)
+    student_comments=models.CharField(max_length=100)   
     student_date_of_joining=models.DateField(auto_now_add=True, auto_now=False, blank=True)
