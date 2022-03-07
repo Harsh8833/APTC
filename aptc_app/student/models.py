@@ -18,7 +18,7 @@ class students_detail(models.Model):
     board=models.CharField(max_length=120, choices=board_choice, default='')
     name=models.CharField(max_length=50)
     gender=models.CharField(max_length=120, choices=gender_choice, default='')
-    dob=models.DateField(auto_now_add=True, auto_now=False, blank=True)
+    dob=models.DateField(auto_now_add=False, auto_now=False, blank=True)
     fname=models.CharField(max_length=50)
     phone=models.IntegerField()
     rnum=models.IntegerField()
