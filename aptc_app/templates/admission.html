@@ -4,6 +4,49 @@
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+  $(document).ready(function()
+  {
+    $('.chck').click(function()
+    {
+      var txt="";
+      $('.chck:checked').each(function()
+      {
+        txt+=$(this).val()+","
+      });
+      $('#txtvalues').val(txt);
+    });
+  });
+</script>
+<script>
+  $(document).ready(function()
+  {
+    $('.tick').click(function()
+    {
+      var txt="";
+      $('.tick:checked').each(function()
+      {
+        txt+=$(this).val()+","
+      });
+      $('#boardvalue').val(txt);
+    });
+  });
+</script>
+<script>
+  $(document).ready(function()
+  {
+    $('.gen').click(function()
+    {
+      var txt="";
+      $('.gen:checked').each(function()
+      {
+        txt+=$(this).val()+","
+      });
+      $('#gendervalue').val(txt);
+    });
+  });
+</script>
 
 
 <nav class="navbar navbar-light">
@@ -34,29 +77,86 @@
     {% csrf_token %}
     <div class="col-md-12 mb-2">
 
-    <!-- Select class -->
-    <div class="form-floating mb-4" style="width: 300px;">
-      <input type="class" class="form-control" name="sclass" id="sclass" placeholder="class">
-       <label class="text-dark" for="board">Class</label>
+    <!-- Image Input -->
+    <div class="row mb-4">
+      <div class="form-group mb-4 col">
+        <label for="exampleFormControlFile1">Image input</label>
+        <input type="file" class="form-control-file" id="exampleFormControlFile1">
+      </div>
     </div>
 
-    <!-- Board input -->
-    <div class="form-floating mb-4" style="width: 300px;">
-      <input type="name" class="form-control" name="board" id="board" placeholder="Board Name">
-      <label class="text-dark" for="board">Board Name</label>
+    <!-- Select class -->
+    <div class="row mb-4">
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="chck" type="checkbox" value="11" id="form2Example3" checked="">
+        <label class="form-check-label" for="form2Example3">
+          11th
+        </label>
+      </div>
+
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="chck" type="checkbox" value="12" id="form2Example3" checked="">
+        <label class="form-check-label" for="form2Example3">
+          12th
+        </label>
+      </div>
     </div>
+    <hr/>
+
+    <div>
+    <input type="text" name="coursename" id="txtvalues"/>
+    </div>
+    <hr/>
+
+    <!-- Board input -->
+    <div class="row mb-4">
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="tick" type="checkbox" name="board" value="CBSE" id="cbse">
+        <label class="form-check-label" for="board">
+          CBSE
+        </label>
+      </div>
+
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="tick" type="checkbox" name="board" value="BSEB" id="bseb">
+        <label class="form-check-label" for="board">
+          BSEB
+        </label>
+      </div>
+    </div>
+    <div class="form-floating mb-4" style="width: 300px;">
+    <input type="text" name="boardname" id="boardvalue"/>
+    </div>
+    <hr/>
 
     <!-- Name input -->
     <div class="form-floating mb-4" style="width: 300px;">
       <input type="name" class="form-control" name="name" id="name" placeholder="Full Name">
       <label class="text-dark" for="name">Name</label>
     </div>
-
+    <hr/>
     
-    <div class="form-floating mb-4" style="width: 300px;">
-      <input type="gender" class="form-control" name="gender" id="board" placeholder="Gender">
-      <label class="text-dark" for="Gender">Gender</label>
+    <!--gender-->
+    <div class="row mb-4">
+      <div class="form-check d-flex justify-content-center mb-4 col">
+        <input class="gen" type="checkbox" name="gender" value="Male" id="male">
+        <label class="form-check-label" for="gender">
+          Male
+        </label>
+      </div>
+    
+      <div class="form-check d-flex justify-content-center mb-4 col">
+         <input class="gen" type="checkbox" name="gender" value="FEMALE" id="female">
+          <label class="form-check-label" for="gender">
+            Female
+          </label>
+       </div>
     </div>
+    <div class="form-floating mb-4" style="width: 300px;">
+    <input type="text" name="gender" id="gendervalue"/>
+    </div>
+    <hr/>
+
     <!-- DOB -->
     <div class="row mb-4">
       <div class="form-floating input-group date" data-provide="datepicker">
@@ -103,7 +203,7 @@
 
     <!-- Submit button -->
     <div class="text-center">
-      <button type="submit" class="btn btn-primary btn-block mb-4">
+      <button id="but1" type="submit" class="btn btn-primary btn-block mb-4">
         Admit
       </button>
     </div>
