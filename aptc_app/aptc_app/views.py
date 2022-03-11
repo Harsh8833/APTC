@@ -7,10 +7,10 @@ def detail(request):
 
 def saveEnquiry(request):
     if request.method=="POST":
-        sclass=request.POST.get('sclass')
-        board=request.POST.get('board')
+        sclass=request.POST.get('coursename')
+        board=request.POST.get('boardname')
         name=request.POST.get('name')
-        gender=request.POST.get('gender')
+        gender=request.POST.get('gender1')
         dob=request.POST.get('dob')
         father=request.POST.get('father')
         phone=request.POST.get('phone')
