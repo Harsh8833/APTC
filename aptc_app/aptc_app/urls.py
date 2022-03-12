@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from aptc_app import views
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [ 
     path('', include('home.urls')),
@@ -25,4 +27,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('saveform/', views.saveEnquiry, name="saveform")   
     
-]
+]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+

@@ -17,8 +17,12 @@ def saveEnquiry(request):
         receipt_no=request.POST.get('receipt_no')
         receipt_amt=request.POST.get('receipt_amt')
         comment=request.POST.get('comment')
-        en=students_detail(sclass=sclass, board=board, name=name, gender=gender, dob=dob, fname=father, phone=phone, rnum=receipt_no, ramt=receipt_amt, comment=comment)
+        
+        if len(request.FILES) != 0:
+            image= request.FILES['image']
+        en=students_detail(sclass=sclass, board=board, name=name, gender=gender, dob=dob, fname=father, phone=phone, rnum=receipt_no, ramt=receipt_amt, comment=comment, image=img)
         en.save()
+        
     return render(request,"admission.html")
 
 
