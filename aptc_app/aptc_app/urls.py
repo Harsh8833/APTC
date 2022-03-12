@@ -27,5 +27,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('saveform/', views.saveEnquiry, name="saveform")   
     
-]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

@@ -75,6 +75,8 @@
   style="border-top-right-radius: 50px; border-top-left-radius: 50px">
   <form action="{% url 'saveform' %}" method="post" enctype="multipart/form-data">
     {% csrf_token %}
+    {{ form.media }}
+    {{ form.as_p }}
     <div class="col-md-12 mb-2">
 
     <!-- Image Input -->
