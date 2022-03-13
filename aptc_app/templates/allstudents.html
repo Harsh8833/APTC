@@ -22,6 +22,68 @@
   </nav>
   
 
-<h1 class="position-absolute top-50 start-50 translate-middle-x">Welcome to all students page</h1>
+  <section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="fw-bold">All Students</h1>
+                    </div>
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>CLASS</th>
+                                    <th>Board</th>
+                                    <th>NAME</th>
+                                    <th>GENDER</th>
+                                    <th>DOB</th>
+                                    <th>Father NAME</th>
+                                    <th>PHONE NUMBER</th>
+                                    <th>RNUM</th>
+                                    <th>RAMT</th>
+                                    <th>COMMENT</th>
+                                    <th>DOJ</th>
+                                    <th>IMAGE</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for detail in detail_list %}
+                                    <tr>
+                                        <td>{{ detail.sclass }} </td>
+                                        <td>{{ detail.board }} </td>
+                                        <td>{{ detail.name }} </td>
+                                        <td>{{ detail.gender }} </td>
+                                        <td>{{ detail.dob }} </td>
+                                        <td>{{ detail.fname }} </td>
+                                        <td>{{ detail.phone }} </td>
+                                        <td>{{ detail.rnum }} </td>
+                                        <td>{{ detail.ramt }} </td>
+                                        <td>{{ detail.comment }} </td>
+                                        <td>{{ detail.doj }} </td>
+                                        {% if detail.image1 %}
+                                            <td>
+                                                <img src="{{ detail.image1.url }}" alt="" class="form-control-file" style="width:100px;height:100px;">
+                                            </td>
+                                        {% else %}
+                                            <td>
+                                                <img src="images/black.jpg" alt="" class="form-control-file" style="width:100px;height:100px;">
+                                            </td>
+                                        {% endif %}
+                                        
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+          
+
+
 
 {% endblock %}

@@ -26,4 +26,8 @@ def saveEnquiry(request):
         
     return render(request,"admission.html")
 
+def allstudents(request):
+    detail_list= students_detail.objects.all()
+    return render(request, "allstudents.html", {'detail_list': detail_list})
 
+#products = detail_list
