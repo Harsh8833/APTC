@@ -1,15 +1,19 @@
 from django.db import models
-from datetime import datetime
+from datetime import datetime, date
 import os  
 
 
 
 class students_detail(models.Model):
+    GENDER_CHO= [
+    ('Male', 'Male'),
+    ('Female', 'Female'),
+    ]
     sclass=models.CharField(max_length=120)
     board=models.CharField(max_length=120)
     name=models.CharField(max_length=50)
-    gender=models.CharField(max_length=120)
-    dob=models.DateField(auto_now_add=True, auto_now=False, blank=True)
+    gender=models.CharField(max_length=10)
+    dob=models.DateField(auto_now_add=False, auto_now=False, blank=True)
     fname=models.CharField(max_length=50)
     phone=models.IntegerField()
     rnum=models.IntegerField()

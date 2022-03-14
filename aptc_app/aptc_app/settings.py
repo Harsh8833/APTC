@@ -111,9 +111,9 @@ LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
-
-USE_TZ = True
-
+L10N=False
+USE_TZ = False
+DATETIME_FORMAT="%Y-%m-%d%H"
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
